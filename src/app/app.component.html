@@ -3,7 +3,7 @@
   <div class="btninput">
       <input  [(ngModel)]="city" placeholder="city"  class="input">
       <button class="btnsearch" (click)="onCityEnter()">  Search</button>
-      <img src="../../assets/load-loading.gif" alt="" class="linmg" ngIf="loading" >
+      <img src="../../assets/load-loading.gif" alt="" class="linmg" *ngIf="loading" >
   </div>
 </div>
 
