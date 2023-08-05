@@ -1,24 +1,9 @@
-<!-- <div class="row">
-  <div class="col-md-6"> <h1>Weather in your city</h1> </div>
-  <div class="col-md-6"> 
-    <div class="row">
-      <div class="col-md-6">
-        <input type="text" class="form-control" #city (keyup.enter)="onCityEnter(city.value)">
-      </div>
-      <div class="col-md-6">
-        <button class="btn btn-primary">Search</button>
-      </div>  
-    </div>
-  </div>
-    
-</div> -->
-
 <div class="searchc">
   <div class="searchtest">Weather in your city</div>
   <div class="btninput">
       <input  [(ngModel)]="city" placeholder="city"  class="input">
       <button class="btnsearch" (click)="onCityEnter()">  Search</button>
-      <img src="../../assets/load-loading.gif" alt="" class="linmg" >
+      <img src="../../assets/load-loading.gif" alt="" class="linmg" ngIf="loading" >
   </div>
 </div>
 
@@ -52,32 +37,6 @@
       </div>
 
 
-        <!-- <table class="table table-bordered">
-          <tbody>
-            <tr class="table-active">
-             Date:{{w.date}}
-            </tr>
-            <tr>
-              Temperature : {{w.temp}}
-            </tr>
-            <tr>
-              <td colspan="2">Min</td>
-              <td>Max</td>
-            </tr>
-            <tr>
-              <td colspan="2">{{w.temp_min}}</td>
-              <td>{{w.temp_max}}</td>
-            </tr>
-            <tr>
-              <td colspan="2">Pressure</td>
-              <td>{{w.pressure}}</td>
-            </tr>
-            <tr>
-              <td colspan="2">Humidity</td>
-              <td>{{w.humidity}}</td>
-            </tr>
-          </tbody>
-        </table> -->
       </div>
     </div>
 
