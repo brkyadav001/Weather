@@ -24,13 +24,20 @@ export class AppComponent {
 
   getLonLat(city:string){
     this.loading=true;
-    this.httpService.getLonLat(city).subscribe({
-      next:(response:any)=>{
-        this.loading=false;
-        console.log(response)
-        this.getWeather(response[0].lat,response[0].lon)
-      }
-  });
+    console.log(city)
+if(city !== undefined){
+  this.httpService.getLonLat(city).subscribe({
+    next:(response:any)=>{
+      this.loading=false;
+      console.log(response)
+      this.getWeather(response[0].lat,response[0].lon)
+    }
+});
+} else {
+  alert("Enter your city Name");
+  this.loading=false;
+}
+
 
 }
 
